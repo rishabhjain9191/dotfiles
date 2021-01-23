@@ -12,6 +12,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
