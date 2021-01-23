@@ -1,6 +1,5 @@
-packloadall
-execute pathogen#infect()
-call pathogen#helptags()
+" execute pathogen#infect()
+" call pathogen#helptags()
 syntax on
 filetype plugin indent on
 set backspace=indent,eol,start
@@ -38,7 +37,6 @@ nmap <leader>lw :CtrlP<CR><C-\>w
 vmap <leader>lw y:CtrlP<CR><C-\>c
 
 nmap <leader>b :CtrlPBuffer<cr>
-colorscheme solarized8_dark
 " colorscheme gruvbox
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
@@ -111,48 +109,6 @@ endfunction
 nmap <leader>x :call LintFix()<cr>
 
 
-" coc config
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
-  \ ]
-
-" Add CoC Prettier if prettier is installed
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-" Add CoC ESLint if ESLint is installed
-" if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-"   let g:coc_global_extensions += ['coc-eslint']
-" endif
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-nnoremap <silent> K :call CocAction('doHover')<CR>
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-
-" Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
 au BufNewFile,BufRead *.tsx			setf typescript.tsx
 set relativenumber
 
@@ -162,3 +118,6 @@ nmap <leader>cl "ap<esc>
 set autoindent
 
 source ~/dotfiles/vim/prettier.vimrc
+source ~/dotfiles/vim/plugins.vimrc
+source ~/dotfiles/vim/mappings.vimrc
+colorscheme solarized8
