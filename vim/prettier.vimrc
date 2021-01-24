@@ -46,3 +46,6 @@ let g:prettier#config#config_precedence = 'prefer-file'
 
 " always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
+"
+" Allow auto formatting for files without @format or @prettier tag
+let g:prettier#autoformat_require_pragma = 0

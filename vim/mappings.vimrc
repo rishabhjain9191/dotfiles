@@ -1,18 +1,5 @@
 " ************************************* Plugins ******************
 "======================================COC.nvim============================
-let g:coc_global_extensions = [
-      \ 'coc-snippets',
-      \ 'coc-pairs',
-      \ 'coc-tsserver',
-      \ 'coc-eslint', 
-      \ 'coc-prettier', 
-      \ 'coc-json', 
-      \ ]
-
-" Add CoC Prettier if prettier is installed
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
 
 " Add CoC ESLint if ESLint is installed
 " if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')

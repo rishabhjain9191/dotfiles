@@ -1,0 +1,14 @@
+{
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "suggest.floatEnable": true,
+  "suggest.detailField": "preview",
+  "diagnostic.messageTarget": "float",
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact"]
+}

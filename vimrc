@@ -117,7 +117,6 @@ nmap <leader>cl "ap<esc>
 
 set autoindent
 
-source ~/dotfiles/vim/prettier.vimrc
 source ~/dotfiles/vim/plugins.vimrc
 source ~/dotfiles/vim/mappings.vimrc
 
