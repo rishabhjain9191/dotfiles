@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Rishabh Kumar Jain
+email = rishjain@adobe.com
+[alias]
+	co = checkout
+  st = status
+  dc = diff --cached
+  br = branch
+  cs = !git add -A && git commit
+[core]
+	excludesfile = /Users/rishjain/.gitignore

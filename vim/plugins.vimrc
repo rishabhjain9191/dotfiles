@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'tpope/vim-fugitive'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
