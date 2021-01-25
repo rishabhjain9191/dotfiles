@@ -9,5 +9,9 @@ email = rishjain@adobe.com
   dc = diff --cached
   br = branch
   cs = !git add -A && git commit
+  unstage = reset HEAD              # remove files from index (tracking)
+  uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
+
 [core]
 	excludesfile = /Users/rishjain/.gitignore
+	editor = vim
