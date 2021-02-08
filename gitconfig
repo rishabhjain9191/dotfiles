@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 name = Rishabh Kumar Jain
 email = rishjain@adobe.com
+
 [alias]
 	co = checkout
   st = status
@@ -11,6 +11,8 @@ email = rishjain@adobe.com
   cs = !git add -A && git commit
   unstage = reset HEAD              # remove files from index (tracking)
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
+  ru = "!f() { git fetch $1 && git reset --hard $1/$2; }; f"
+  
 
 [core]
 	excludesfile = /Users/rishjain/.gitignore

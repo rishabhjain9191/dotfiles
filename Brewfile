@@ -1,2 +1,5 @@
 cask "sublime-text"
 cask "visual-studio-code"
+cask "bitwarden"
+cask "vlc"
+brew  "bitwarden-cli"
