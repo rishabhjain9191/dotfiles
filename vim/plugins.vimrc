@@ -17,6 +17,7 @@ Plug 'lifepillar/vim-gruvbox8'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/loremipsum'
+Plug 'vim-scripts/TaskList.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -28,7 +29,6 @@ source ~/dotfiles/vim/prettier.vimrc
 "------------------------Coc.nvim-----------------------------
 let g:coc_global_extensions = [
       \ 'coc-snippets',
-      \ 'coc-pairs',
       \ 'coc-tsserver',
       \ 'coc-eslint', 
       \ 'coc-prettier', 
