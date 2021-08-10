@@ -40,7 +40,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 nmap <leader>lw :CtrlP<CR><C-\>w
 vmap <leader>lw y:CtrlP<CR><C-\>c
 
-nmap <leader>b :CtrlPBuffer<cr>
 " colorscheme gruvbox
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
@@ -139,4 +138,5 @@ colorscheme solarized8
 
 
 
-nmap <D-s> :echo "Hello"<cr>
+nnoremap gb :buffer#<CR>
+

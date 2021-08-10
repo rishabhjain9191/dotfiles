@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdtree'
 Plug 'lifepillar/vim-solarized8'
 Plug 'rking/ag.vim'
@@ -18,6 +18,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/TaskList.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 

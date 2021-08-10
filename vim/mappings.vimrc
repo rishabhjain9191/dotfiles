@@ -24,3 +24,8 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 "======================================COC.nvim============================
+
+"====================================== fzf ============================
+nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <leader>b :Buffers<cr>
+"====================================== fzf ============================
