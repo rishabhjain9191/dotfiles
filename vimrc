@@ -3,7 +3,7 @@
 syntax on
 filetype plugin indent on
 set backspace=indent,eol,start
-set incsearch ignorecase hlsearch
+set incsearch ignorecase hlsearch smartcase
 
 set shiftwidth=2    " use indents of 2 spaces
 set sw=2 ts=2 tabstop=2 softtabstop=2 nosmarttab expandtab
@@ -134,9 +134,11 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 set background=dark
-colorscheme solarized8
+colorscheme gruvbox8
 
 
 
-nnoremap gb :buffer#<CR>
+nnoremap <leader>s :w<CR>
+nnoremap <leader>a :Rg<space>
+
 
