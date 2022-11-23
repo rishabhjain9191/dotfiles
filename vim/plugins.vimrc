@@ -20,9 +20,13 @@ Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/TaskList.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'mattn/emmet-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-
+call glaive#Install()
 "########################Plugins Configs#####################
 
 "------------------------Prettier-----------------------------

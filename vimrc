@@ -57,8 +57,12 @@ map <D-s> :write
 
 
 au BufNewFile *.cpp 0r ~/.vim/cpp.skel | let IndentStyle = "cpp"
+au BufNewFile *.html 0r ~/.vim/html.skel | let IndentStyle = "html"
 " autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -T4p
 " autocmd BufWritePre *.cpp :normal gggqG
+augroup autoformat_settings
+  autocmd FileType c,cpp AutoFormatBuffer clang-format
+augroup END
 
 
 nmap <leader>e :NERDTreeToggle<cr>
@@ -121,7 +125,7 @@ function! ConsoleCurrentLine()
   put =v
 endfunction
 
-let @a = "console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');"
+let @a = "console.log('%c Testing! ', 'background: #222; color: #bada55');"
 nmap <leader>cl "ap<esc>
 nmap <leader>ccl :call ConsoleCurrentLine()<cr>
 
@@ -136,6 +140,20 @@ set termguicolors
 set background=dark
 colorscheme gruvbox8
 
+
+" call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+function! RgWithNoArgs(query, fullscreen)
+  let final_query = a:query
+  if len(final_query) == 0
+    let final_query = printf("%s", expand("<cword>"))
+  endif
+  echo "searching for ".final_query
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(final_query))
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang Rg call RgWithNoArgs(<q-args>,<bang>0)
 
 
 nnoremap <leader>s :w<CR>

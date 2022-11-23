@@ -12,8 +12,11 @@ email = rishjain@adobe.com
   unstage = reset HEAD              # remove files from index (tracking)
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
   ru = "!f() { git fetch $1 && git reset --hard $1/$2; }; f"
+  cp = "!f() { git checkout $1 && git cherry-pick $2 && git checkout -}; f"
   
 
 [core]
 	excludesfile = /Users/rishjain/.gitignore
 	editor = vim
+[init]
+	defaultBranch = main
