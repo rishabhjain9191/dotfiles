@@ -1,5 +1,6 @@
 # To run: brew bundle or brew bundle --file="~/Brewfile"
 brew  "bitwarden-cli"
+brew "bat"
 
 cask "sublime-text"
 cask "visual-studio-code"
