@@ -1,5 +1,5 @@
 # To run: brew bundle or brew bundle --file="~/Brewfile"
-brew  "bitwarden-cli"
+brew "bitwarden-cli"
 brew "bat"
 brew "vim"
 brew "youtube-dl"
