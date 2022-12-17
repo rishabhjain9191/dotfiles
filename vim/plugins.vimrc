@@ -24,6 +24,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'mattn/emmet-vim'
+Plug 'wakatime/vim-wakatime'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 call glaive#Install()
@@ -34,7 +35,6 @@ source ~/dotfiles/vim/prettier.vimrc
 "
 "------------------------Coc.nvim-----------------------------
 let g:coc_global_extensions = [
-      \ 'coc-snippets',
       \ 'coc-tsserver',
       \ 'coc-eslint', 
       \ 'coc-prettier', 
@@ -43,8 +43,10 @@ let g:coc_global_extensions = [
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-" Add CoC Prettier if prettier is installed
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
+" " Add CoC Prettier if prettier is installed
+" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+"   let g:coc_global_extensions += ['coc-prettier']
+" endif
+"------------------------fzf.nvim-----------------------------
+let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 "########################Plugins Configs#####################

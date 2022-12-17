@@ -22,8 +22,10 @@ set laststatus=2
 set termguicolors
 set background=dark
 set foldmethod=syntax
+set foldlevelstart=99
 
 let mapleader = ","
+let javascript_fold=1
 
 map <F8> :tabn<enter>
 map <F7> :tabp<enter>
@@ -111,7 +113,7 @@ function! Autosave()
   end
 endfunction
 
-autocmd BufLeave *.js,*.tsx :call Autosave()
+autocmd BufLeave *.js,*.tsx,*.ts :call Autosave()
 
 function! LintFix()
   execute '!npm run lint-fix' shellescape(expand('%'))
@@ -147,7 +149,7 @@ function! RgWithNoArgs(query, fullscreen)
     let final_query = printf("%s", expand("<cword>"))
   endif
   echo "searching for ".final_query
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let command_fmt = 'rg --column --fixed-strings --line-number --no-heading --color=always --smart-case -- %s || true'
   let initial_command = printf(command_fmt, shellescape(final_query))
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(), a:fullscreen)
 endfunction
