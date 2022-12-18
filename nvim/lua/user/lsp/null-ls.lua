@@ -11,7 +11,8 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.prettier,
+    formatting.prettierd,
     formatting.stylua,
   },
 }
+
