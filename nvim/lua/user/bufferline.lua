@@ -9,6 +9,9 @@ bufferline.setup({
     truncate_names = false,
     show_buffer_icons = false,
     show_buffer_default_icon = false,
+    show_close_icon = false,
+    show_tab_indicators = false,
+    always_show_bufferline = true,
     hover = {
       enabled = false,
     },

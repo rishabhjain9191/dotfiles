@@ -51,14 +51,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-vim.keymap.set('n', '<leader>a', builtin.live_grep, {})
+vim.keymap.set('n', '<C-p>', builtin.find_files, opts)
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>f', function() builtin.grep_string({ search = vim.fn.input('Grep > ') }) end, {})
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>f", ":NvimTreeFindFile<cr>", opts)
 
 function Clean_buffer()
   vim.api.nvim_command('noh');
