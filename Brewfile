@@ -131,7 +131,7 @@ cask "wireshark"
 mas "Edge Runner", id: 1219655804
 mas "Fantastical", id: 975937182
 mas "Free Ruler", id: 1483172210
-mas "GarageBand", id: 682658836
+# mas "GarageBand", id: 682658836
 mas "IP Scanner", id: 404167149
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
