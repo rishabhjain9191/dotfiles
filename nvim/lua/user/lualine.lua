@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local get_monorepo_package_name = require("utils").get_monorepo_package_name;
+
 lualine.setup({
   options = {
     icons_enabled = false,
@@ -11,8 +13,7 @@ lualine.setup({
  sections = {
       lualine_c = {
         {
-          'filename',
-          path = 1,
+          get_monorepo_package_name
         }
       }
     }

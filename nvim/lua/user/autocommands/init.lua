@@ -28,3 +28,4 @@ autocommand('BufWritePre', {
     format()
   end
 });
+

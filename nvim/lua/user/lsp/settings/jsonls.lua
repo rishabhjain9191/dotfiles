@@ -161,6 +161,11 @@ local schemas = {
     fileMatch = { "resume.json" },
     url = "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   },
+  {
+    description = "Rush json",
+    fileMatch = { "rush.json" },
+    url = "https://raw.githubusercontent.com/microsoft/json-schemas/main/rush/v4/rush.schema.json",
+  },
 }
 
 -- local function extend(tab1, tab2)
