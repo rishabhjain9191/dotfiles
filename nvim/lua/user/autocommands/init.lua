@@ -11,7 +11,7 @@ end
 -- auto save on leaving buffer
 autocommand('BufLeave', {
   group = MyGroup,
-  pattern = { "*.ts", "*.tsx" },
+  pattern = { "*.ts", "*.tsx", '*.jsx', '*.js' },
   callback = function()
     if vim.o.modified then
       format()
@@ -23,7 +23,7 @@ autocommand('BufLeave', {
 -- auto format on changing buffer
 autocommand('BufWritePre', {
   group = MyGroup,
-  pattern = { "*.ts", "*.tsx" },
+  pattern = { "*.ts", "*.tsx", "*.jsx", "*.js" },
   callback = function()
     format()
   end

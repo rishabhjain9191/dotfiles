@@ -73,14 +73,15 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim',
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
+    use "rishabhjain9191/telescope-monorepos"
 
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "nvim-treesitter/playground"
   -- use "p00f/nvim-ts-rainbow"
-  -- use "nvim-treesitter/playground"
   --
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
