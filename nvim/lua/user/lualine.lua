@@ -8,7 +8,7 @@ local get_monorepo_package_name = require("utils").get_monorepo_package_name;
 lualine.setup({
   options = {
     icons_enabled = false,
-    theme = 'gruvbox',
+    theme = 'tokyonight',
   },
  sections = {
       lualine_c = {
