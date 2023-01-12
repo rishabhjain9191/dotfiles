@@ -65,3 +65,5 @@ function Clean_buffer()
 end
 
 keymap("n", "<leader>q", ":lua Clean_buffer()<cr>", opts)
+keymap("n", "<leader>o", ":AerialToggle<cr>", opts)
+
